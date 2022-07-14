@@ -1,0 +1,56 @@
+section {
+    display:grid;
+    grid-template-columns: repeat(4, 8rem);
+    grid-template-rows: repeat(4, 8rem);
+    grid-gap: 2.3rem;
+    perspective: 1200px;  
+}
+
+body {
+    height: 100vh;
+    background-color: #0038A8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    color: white;
+    
+    text-align: center;
+}
+
+.card{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+}
+
+.front,.back, .backLogo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    box-shadow: 10px 15px;
+}
+
+.back {
+    background-color: white;
+    backface-visibility: hidden;
+    
+}
+
+.toggle {
+    transform: rotateY(180deg);
+}
+
+.resetGame{
+    margin-top: 35px;
+}
+
+h2, .results{
+ font-size: 50px;
+ color: white;
+ margin-bottom: 20px;   
+}
